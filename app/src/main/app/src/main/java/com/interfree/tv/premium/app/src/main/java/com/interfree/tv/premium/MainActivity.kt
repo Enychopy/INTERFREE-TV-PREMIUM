@@ -41,14 +41,14 @@ class MainActivity : Activity() {
 
         val user = EditText(this).apply {
             hint = "Usuario"
-            singleLine = true
+            setSingleLine(true)
             setTextColor(Color.WHITE)
             setHintTextColor(Color.LTGRAY)
         }
 
         val pass = EditText(this).apply {
             hint = "Contraseña"
-            singleLine = true
+            setSingleLine(true)
             inputType = 129
             setTextColor(Color.WHITE)
             setHintTextColor(Color.LTGRAY)
