@@ -8,8 +8,7 @@
         android:allowBackup="false"
         android:label="INTERFREE TV PREMIUM"
         android:theme="@android:style/Theme.Material.NoActionBar"
-        android:usesCleartextTraffic="true"
-        android:supportsRtl="true">
+        android:usesCleartextTraffic="true">
 
         <activity
             android:name=".MainActivity"
