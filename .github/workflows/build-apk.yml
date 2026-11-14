@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   build:
+    name: Compilar APK
     runs-on: ubuntu-latest
 
     steps:
@@ -29,8 +30,13 @@ jobs:
         with:
           gradle-version: '8.9'
 
+      - name: Revisar archivos del proyecto
+        run: |
+          echo "Estructura del proyecto:"
+          find app/src/main -type f
+
       - name: Compilar APK
-        run: gradle --no-daemon assembleDebug
+        run: gradle --no-daemon assembleDebug --stacktrace --info
 
       - name: Guardar APK
         uses: actions/upload-artifact@v4
